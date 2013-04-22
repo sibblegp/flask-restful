@@ -67,11 +67,11 @@ class Raw(object):
         :param value: The value to format
         :exception MarshallingException: In case of formatting problem
 
-        Ex:
+        Ex::
 
-        class TitleCase(Raw):
-            def format(self, value):
-                return unicode(value).title()
+            class TitleCase(Raw):
+                def format(self, value):
+                    return unicode(value).title()
         """
         return value
 
@@ -167,6 +167,9 @@ class FormattedString(Raw):
 
 
 class Url(Raw):
+    """
+    A string representation of a Url
+    """
     def __init__(self, endpoint):
         super(Url, self).__init__()
         self.endpoint = endpoint
